@@ -1,0 +1,151 @@
+{
+	"info": {
+		"_postman_id": "3928d548-157f-4ac4-acb4-b74d9081fd64",
+		"name": "backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "all blog",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:52395/api/blogs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "52395",
+					"path": [
+						"api",
+						"blogs"
+					]
+				},
+				"description": "ilk istek "
+			},
+			"response": []
+		},
+		{
+			"name": "bloag add",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoic2UiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjEiLCJuYmYiOjE1OTQ5MDE5NzIsImV4cCI6MTU5NDkwNDM3MiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MjM5NSIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NTAwMCJ9.JMv_Z9rm3FAgGOcaJ7-0StzzIBs8MA2P4fVa860dAW0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "AppUserID",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "Title",
+							"value": "başlık",
+							"type": "text"
+						},
+						{
+							"key": "shortDescription",
+							"value": "postman shortDescription",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "postman description",
+							"type": "text"
+						},
+						{
+							"key": "imagePath",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:52395/api/blogs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "52395",
+					"path": [
+						"api",
+						"blogs"
+					]
+				},
+				"description": "ilk istek "
+			},
+			"response": []
+		},
+		{
+			"name": "login TOKEN",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"se\",\r\n    \"password\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:52395/api/Auth/SignIn",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "52395",
+					"path": [
+						"api",
+						"Auth",
+						"SignIn"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "veri silme ",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoic2UiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjEiLCJuYmYiOjE1OTQ5MDgyMDIsImV4cCI6MTU5NDkxMDYwMiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MjM5NSIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NTAwMCJ9.Jq-4yBDGwlx7euKtT4nuWWQzrReAvZNw0utGITHGxZE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:52395/api/blogs/38",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "52395",
+					"path": [
+						"api",
+						"blogs",
+						"38"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
